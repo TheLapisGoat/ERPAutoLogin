@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Login Extension",
+    "version": "1.0",
+    "permissions": [
+        "cookies",
+        "storage",
+        "activeTab",
+        "identity",
+        "identity.email",
+        "https://www.googleapis.com/",
+        "*://erp.iitkgp.ac.in/*"
+    ],
+    "host_permissions": [
+        "https://www.googleapis.com/",
+        "*://erp.iitkgp.ac.in/*"
+    ],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwOxqSePl7QBMuKvUzOMWKKtGqYL3VUgjg2egZBgJMYFXK28/SY9iFFp53m/ATfYQLHbq9enGYB0giMicMP8OvFshagCaE3IhyDSUjPBdpriu4cX2MwYg/XCw+NiKphdZQlx4yM/7iCoDwubgeQ2O/cQD1Sfnem5oQCZQXmSKSkXGw49EdykPPEIy/Ke3aF7wNERDGDy7OqmrIl0pq3M5sDyQRnkiOSTT1kWNy/4pELIkoEIpydzxdbJlRd0CXN+3Gk6Bf9HdH0x4oyqhQgPjZLqeHbE0UW1jz03W36ZOKuHj9yL62a1vX3KBdfJMTm3z8aa/vHdIk/ZzXYNH7tdQ8QIDAQAB",
+    "background": {
+        "service_worker": "background.js",
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://erp.iitkgp.ac.in/SSOAdministration/login.htm*"],
+            "js": ["content.js"]
+        }
+    ],
+    "oauth2": {
+        "client_id": "46039633728-c5q4jkfatl3hfjcsrop2rje8j8etj1u5.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/gmail.modify",
+            "https://www.googleapis.com/auth/userinfo.email"
+        ]
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

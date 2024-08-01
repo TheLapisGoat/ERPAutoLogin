@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      width: 300px; /* Set a fixed width */
+    }
+    h3 {
+      margin-top: 0;
+    }
+    input {
+      margin-bottom: 10px;
+      width: calc(100% - 12px); /* Adjust width to fit the container */
+      padding: 5px;
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h3>Enter Login Details</h3>
+  <input id="username" type="text" placeholder="Username" />
+  <input id="password" type="password" placeholder="Password" />
+  <input id="question1" type="text" placeholder="Security Question 1" />
+  <input id="answer1" type="text" placeholder="Answer 1" />
+  <input id="question2" type="text" placeholder="Security Question 2" />
+  <input id="answer2" type="text" placeholder="Answer 2" />
+  <input id="question3" type="text" placeholder="Security Question 3" />
+  <input id="answer3" type="text" placeholder="Answer 3" />
+  <button id="save">Save</button>
+  <script src="popup.js"></script>
+</body>
+</html>
